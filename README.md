@@ -3,10 +3,23 @@
 
 Resolve a local npm package as binary path
 
+## Install
+
+```bash
+$ npm install --save resolve-as-bin
+```
+
 ## Usage
 
 ```js
 import resolve from 'resolve-as-bin'
 
-console.log(resolve('rimraf')) // ./node_modules/.bin/rimraf(.cmd)
+var binPath = resolve('rimraf')
+console.log(binPath) // ./node_modules/.bin/rimraf(.cmd)
+
+// you can execute by `child_process`
+var spawnSync = require('child_process').spawnSync
+
+// rimraf dist node_modules
+spawnSync(binPath, ['dist', 'node_modules'])
 ```
