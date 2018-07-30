@@ -1,6 +1,6 @@
 {
   "name": "resolve-as-bin",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Resolve a local npm package as binary path",
   "main": "index.js",
   "repository": "git@github.com:saltyshiomix/resolve-as-bin.git",
