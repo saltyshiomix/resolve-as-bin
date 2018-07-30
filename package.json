@@ -5,5 +5,8 @@
   "main": "index.js",
   "repository": "git@github.com:saltyshiomix/resolve-as-bin.git",
   "author": "Yoshihide Shiono <shiono.yoshihide@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "cross-spawn": "6.0.5"
+  }
 }
