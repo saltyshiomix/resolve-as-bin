@@ -1,7 +1,8 @@
-<a href="https://www.npmjs.com/package/resolve-as-bin"><img src="https://img.shields.io/npm/v/resolve-as-bin.svg"></a>
-<a href="https://www.npmjs.com/package/resolve-as-bin"><img src="https://img.shields.io/npm/dt/resolve-as-bin.svg"></a>
-
-Resolve a local npm package as binary path
+<p align="center">
+  <a href="https://www.npmjs.com/package/resolve-as-bin"><img src="https://img.shields.io/npm/v/resolve-as-bin.svg"></a>
+  <a href="https://www.npmjs.com/package/resolve-as-bin"><img src="https://img.shields.io/npm/dt/resolve-as-bin.svg"></a>
+</p>
+<p align="center">Resolve a local npm package as the binary path</p>
 
 ## Install
 
@@ -12,14 +13,12 @@ $ npm install --save resolve-as-bin
 ## Usage
 
 ```js
-import resolve from 'resolve-as-bin'
+import resolve from 'resolve-as-bin';
 
-var binPath = resolve('rimraf')
-console.log(binPath) // ./node_modules/.bin/rimraf(.cmd)
+// npm installed package
+console.log(resolve('rimraf')); // ./node_modules/.bin/rimraf(.cmd)
 
-// you can execute by `child_process`
-var spawnSync = require('child_process').spawnSync
-
-// rimraf dist node_modules
-spawnSync(binPath, ['dist', 'node_modules'])
+// relative or absolute paths are supported
+console.log(resolve('./some-binary')); // /absolute/path/to/some-binary
+console.log(resolve('/another-binary')); // /another-binary
 ```
