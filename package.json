@@ -6,7 +6,31 @@
   "repository": "git@github.com:saltyshiomix/resolve-as-bin.git",
   "author": "Yoshihide Shiono <shiono.yoshihide@gmail.com>",
   "license": "MIT",
+  "homepage": "https://github.com/saltyshiomix/resolve-as-bin",
+  "keywords": [
+    "bin",
+    "path",
+    "npm",
+    "resolve-as-bin"
+  ],
+  "bugs": {
+    "url": "https://github.com/saltyshiomix/resolve-as-bin/issues",
+    "email": "shiono.yoshihide@gmail.com"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
   "dependencies": {
     "cross-spawn": "^6.0.5"
+  },
+  "devDependencies": {
+    "@types/cross-spawn": "^6.0.0",
+    "@types/node": "^12.6.4",
+    "typescript": "^3.5.3"
   }
 }
