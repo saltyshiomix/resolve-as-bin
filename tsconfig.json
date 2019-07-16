@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es2017",
+    "target": "es2017", // node v8
     "module": "commonjs",
     "jsx": "preserve",
     "lib": [
